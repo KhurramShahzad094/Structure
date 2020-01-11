@@ -28,6 +28,10 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
+    kapt {
+        correctErrorTypes true
+    }
 }
 
 dependencies {
@@ -92,4 +96,6 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     // if you use the support libraries
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+
 }

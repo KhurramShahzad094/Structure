@@ -5,17 +5,18 @@ import com.structure.BaseApplication
 import com.structure.di.viewmodel.ViewModelProviderFactoryModule
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [AndroidSupportInjectionModule::class, ActivityBuilderModule::class, AppModule::class, ViewModelProviderFactoryModule::class]
+    modules = [AndroidInjectionModule::class, ActivityBuilderModule::class, AppModule::class, ViewModelProviderFactoryModule::class]
 )
-interface AppComponent : AndroidInjector<BaseApplication> {
+interface AppComponent{
 
-    override fun inject(application: BaseApplication)
+    fun inject(application: BaseApplication)
 
     @Component.Builder
     interface Builder {

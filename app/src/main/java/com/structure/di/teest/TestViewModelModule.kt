@@ -12,8 +12,8 @@ import dagger.multibindings.IntoMap
 abstract class TestViewModelModule {
 
 
-    @Binds
-    @IntoMap
-    @ViewModelKey(TestViewModel::class)
-    abstract fun bindTestViewModel(viewModel: TestViewModel) : ViewModel
+//    @Binds
+//    @IntoMap
+//    @ViewModelKey(TestViewModel::class)
+//    abstract fun bindTestViewModel(viewModel: TestViewModel) : ViewModel
 }
