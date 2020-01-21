@@ -51,11 +51,11 @@ class TestFragment : Fragment(), Injectable {
         sharedViewModel = ViewModelProvider(activity!!,viewModelFactory)
             .get(SharedViewModel::class.java)
 
-        viewModel.name.value="testing"
+        viewModel.name.value="testing for observer"
 
-        viewModel.name.observe(this, object : Observer<String> {
+        viewModel.name.observe(viewLifecycleOwner, object : Observer<String> {
             override fun onChanged(t: String?) {
-//                tv.text = t!!
+                tv.text = t!!
             }
 
         })
